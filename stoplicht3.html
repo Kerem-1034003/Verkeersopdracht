@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>stoplicht3</title>
+</head>
+<body background="./afbeeldingen/kruising.png">
+
+<form>
+    <h1>stoplicht3</h1>
+    <p>schakelen en positioneren van het plaatje</p>
+    <p>klik op een knop om het stplichht te veranderen</p>
+    <input type="button" value="rood" onclick="maakRood()">
+    <input type="button" value="groen" onclick="maakGroen()">
+    <input type="button" value="geel" onclick="maakGeel()">
+    <input type="button" value="uit" onclick="uit()">
+    <img id="stoplicht" src="./afbeeldingen/stoplichtuit.png" width="20px" height="40px">
+</form>
+<script>
+    var stoplicht= document.getElementById('stoplicht');
+    stoplicht.style.position='absolute';
+    stoplicht.style.left= '715px';
+    stoplicht.style.top='510px';
+
+    function maakRood() {
+        stoplicht.src="./afbeeldingen/stoplichtrood.png"
+    }
+    function maakGroen() {
+        stoplicht.src="./afbeeldingen/stoplichtgroen.png"
+    }
+    function maakGeel() {
+        stoplicht.src="./afbeeldingen/stoplichtgeel.png"
+    }
+    function uit() {
+        stoplicht.src="./afbeeldingen/stoplichtuit.png"
+    }
+</script>
+
+</body>
+</html>
